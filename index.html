@@ -1,1 +1,111 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Malla Terapia Ocupacional - UST</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1>Malla Terapia Ocupacional - Universidad Santo Tomás</h1>
+  <div class="semestres">
+    <!-- 1° Semestre -->
+    <div class="semestre">
+      <h2>1° Semestre</h2>
+      <div class="ramo" data-id="1" onclick="toggleRamo(this)">Taller de Competencias para el Aprendizaje</div>
+      <div class="ramo" data-id="2" onclick="toggleRamo(this)">Principios de la Biología</div>
+      <div class="ramo" data-id="3" onclick="toggleRamo(this)">Fundamentos de Terapia Ocupacional</div>
+      <div class="ramo" data-id="4" onclick="toggleRamo(this)">Psicología General y del Desarrollo</div>
+      <div class="ramo" data-id="5" onclick="toggleRamo(this)">Taller de Competencias Comunicativas</div>
+    </div>
+
+    <!-- 2° Semestre -->
+    <div class="semestre">
+      <h2>2° Semestre</h2>
+      <div class="ramo bloqueado" data-id="6" data-prerreq="2" onclick="toggleRamo(this)">Anatomía y Fisiología de Sistemas</div>
+      <div class="ramo bloqueado" data-id="7" data-prerreq="1" onclick="toggleRamo(this)">Cultura y Valores</div>
+      <div class="ramo bloqueado" data-id="8" data-prerreq="3" onclick="toggleRamo(this)">Ocupación Humana</div>
+      <div class="ramo bloqueado" data-id="9" data-prerreq="4" onclick="toggleRamo(this)">Razonamiento Lógico Matemático</div>
+    </div>
+
+    <!-- 3° Semestre -->
+    <div class="semestre">
+      <h2>3° Semestre</h2>
+      <div class="ramo bloqueado" data-id="10" data-prerreq="6" onclick="toggleRamo(this)">Anatomía Descriptiva</div>
+      <div class="ramo bloqueado" data-id="11" data-prerreq="5" onclick="toggleRamo(this)">Desempeño y Participación Ocupacional</div>
+      <div class="ramo bloqueado" data-id="12" data-prerreq="3" onclick="toggleRamo(this)">Procesos de Terapia Ocupacional</div>
+      <div class="ramo bloqueado" data-id="13" data-prerreq="8" onclick="toggleRamo(this)">Psicología Social y del Trabajo</div>
+    </div>
+
+    <!-- 4° Semestre -->
+    <div class="semestre">
+      <h2>4° Semestre</h2>
+      <div class="ramo bloqueado" data-id="14" data-prerreq="10" onclick="toggleRamo(this)">Fundamentos del Movimiento Humano</div>
+      <div class="ramo bloqueado" data-id="15" data-prerreq="11" onclick="toggleRamo(this)">Análisis y Adaptación de la Actividad y del Entorno</div>
+      <div class="ramo bloqueado" data-id="16" data-prerreq="13" onclick="toggleRamo(this)">Estadística y Epidemiología</div>
+      <div class="ramo bloqueado" data-id="17" data-prerreq="7" onclick="toggleRamo(this)">Taller de Desarrollo Personal I</div>
+    </div>
+
+    <!-- 5° Semestre -->
+    <div class="semestre">
+      <h2>5° Semestre</h2>
+      <div class="ramo bloqueado" data-id="18" data-prerreq="14" onclick="toggleRamo(this)">Biomecánica</div>
+      <div class="ramo bloqueado" data-id="19" data-prerreq="15" onclick="toggleRamo(this)">Razonamiento Profesional</div>
+      <div class="ramo bloqueado" data-id="20" data-prerreq="16" onclick="toggleRamo(this)">Seminario de Investigación</div>
+      <div class="ramo bloqueado" data-id="21" data-prerreq="12" onclick="toggleRamo(this)">Psicomotricidad</div>
+    </div>
+
+    <!-- 6° Semestre -->
+    <div class="semestre">
+      <h2>6° Semestre</h2>
+      <div class="ramo bloqueado" data-id="22" data-prerreq="18" onclick="toggleRamo(this)">Ergonomía y Salud en el Trabajo</div>
+      <div class="ramo bloqueado" data-id="23" data-prerreq="19" onclick="toggleRamo(this)">Diagnóstico Ocupacional en Niños, Niñas y Adolescentes</div>
+      <div class="ramo bloqueado" data-id="24" data-prerreq="21" onclick="toggleRamo(this)">Psicomotricidad Aplicada</div>
+      <div class="ramo bloqueado" data-id="25" data-prerreq="20" onclick="toggleRamo(this)">Metodología y Diseño de Investigación</div>
+    </div>
+
+    <!-- 7° Semestre -->
+    <div class="semestre">
+      <h2>7° Semestre</h2>
+      <div class="ramo bloqueado" data-id="26" data-prerreq="23" onclick="toggleRamo(this)">Intervención Ocupacional en Niños, Niñas y Adolescentes</div>
+      <div class="ramo bloqueado" data-id="27" data-prerreq="22" onclick="toggleRamo(this)">Diagnóstico Ocupacional en Adultos</div>
+      <div class="ramo bloqueado" data-id="28" data-prerreq="25" onclick="toggleRamo(this)">Electivo I</div>
+      <div class="ramo bloqueado" data-id="29" data-prerreq="25" onclick="toggleRamo(this)">Inglés Básico I</div>
+    </div>
+
+    <!-- 8° Semestre -->
+    <div class="semestre">
+      <h2>8° Semestre</h2>
+      <div class="ramo bloqueado" data-id="30" data-prerreq="26" onclick="toggleRamo(this)">Salud Mental en Niños, Niñas y Adolescentes</div>
+      <div class="ramo bloqueado" data-id="31" data-prerreq="27" onclick="toggleRamo(this)">Intervención Ocupacional en Adultos</div>
+      <div class="ramo bloqueado" data-id="32" data-prerreq="28" onclick="toggleRamo(this)">Electivo II</div>
+      <div class="ramo bloqueado" data-id="33" data-prerreq="29" onclick="toggleRamo(this)">Inglés Básico II</div>
+    </div>
+
+    <!-- 9° Semestre -->
+    <div class="semestre">
+      <h2>9° Semestre</h2>
+      <div class="ramo bloqueado" data-id="34" data-prerreq="31" onclick="toggleRamo(this)">Diagnóstico Ocupacional en Personas Mayores</div>
+      <div class="ramo bloqueado" data-id="35" data-prerreq="30" onclick="toggleRamo(this)">Salud Mental del Adulto y la Persona Mayor</div>
+      <div class="ramo bloqueado" data-id="36" data-prerreq="33" onclick="toggleRamo(this)">Electivo III</div>
+      <div class="ramo bloqueado" data-id="37" data-prerreq="32" onclick="toggleRamo(this)">Taller de Desarrollo Personal II</div>
+    </div>
+
+    <!-- 10° Semestre -->
+    <div class="semestre">
+      <h2>10° Semestre</h2>
+      <div class="ramo bloqueado" data-id="38" data-prerreq="34" onclick="toggleRamo(this)">Intervención Ocupacional en Personas Mayores</div>
+      <div class="ramo bloqueado" data-id="39" data-prerreq="35" onclick="toggleRamo(this)">Gestión y Terapia Ocupacional</div>
+      <div class="ramo bloqueado" data-id="40" data-prerreq="36" onclick="toggleRamo(this)">Diagnóstico e Intervención en la Comunidad</div>
+      <div class="ramo bloqueado" data-id="41" data-prerreq="37" onclick="toggleRamo(this)">Ética en Salud</div>
+      <div class="ramo bloqueado" data-id="42" data-prerreq="38" onclick="toggleRamo(this)">Internado Profesional I</div>
+      <div class="ramo bloqueado" data-id="43" data-prerreq="42" onclick="toggleRamo(this)">Internado Profesional II</div>
+      <div class="ramo bloqueado" data-id="44" data-prerreq="43" onclick="toggleRamo(this)">Internado Profesional III</div>
+      <div class="ramo bloqueado" data-id="45" data-prerreq="44" onclick="toggleRamo(this)">Internado Profesional IV</div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
 
